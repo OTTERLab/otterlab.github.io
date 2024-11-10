@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Pablo Cesar Bedolla Ortiz",
+        "title": "Lead Researcher",
+        "bio": "Pablo C. Bedolla Ortiz is the leading researcher in autonomous vision-based systems at OTTERLabs.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtqdF4UZu6JfHfOySPOaptSvPPcacu2AsyxA&s",
+        "email": "pbedollaortiz@my.dom.edu",
+        "major": "Mathematics, Electrical Engineering",
+        "department": "Mathematics, Engineering",
+        "website": "https://www.pablobedolla.com/",
+        "github": "https://github.com/bedolpab"
+    },
+    {
+        "name": "Oscar Meza Quintero",
+        "title": "Lead Researcher",
+        "bio": "Oscar Meza Quintero is the mechanical engineering systems of the autonomous vision-based systems at OTTERLabs.",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQEep6678nzOag/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1729734323584?e=2147483647&v=beta&t=u4MBSERE6f8a45sQGdku8WrqxMwbCj1UkpG9sjyhAZM",
+        "email": "omezaquintero@my.dom.edu",
+        "major": "Mathematics, Mechanical Engineering",
+        "department": "Mathematics, Engineering",
+        "website": "https://www.linkedin.com/in/oscar-meza-quintero-286020268",
+        "github": "/"
+    }
+]
