@@ -231,6 +231,28 @@ Position Grids
     gap: 2rem;
 }
 
+
+/* Desktop: Show 3 cards */
+@media (min-width: 992px) {
+    .positions-grid {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+
+/* Tablet: Show 2 cards */
+@media (min-width: 768px) and (max-width: 991px) {
+    .positions-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+/* Mobile: Show 1 card */
+@media (max-width: 767px) {
+    .positions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .position-card {
     background: var(--background);
     color: var(--text);
@@ -324,7 +346,10 @@ Position Grids
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
+    gap: 0.5rem; /* Adjusts the spacing between department and major */
+    flex-wrap: wrap; /* Ensures responsive wrapping if the text is too long */
 }
+
 
 .info-label {
     color: var(--text-secondary);

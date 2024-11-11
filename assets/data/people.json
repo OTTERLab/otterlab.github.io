@@ -31,5 +31,38 @@
         "department": "Mathematics, Software",
         "website": "https://www.alexandernavarretealvarez.com/",
         "github": "https://github.com/anav12"
+    },
+    {
+        "name": "Lesli Enriquez-Romo",
+        "title": "Chief Biologist",
+        "bio": "Lesli Enriquez-Romo is the Chief Biologist of OTTER Laboratories. She leads the lab's biology and chemistry projects, focusing on advancing experimental research at the intersection of biological sciences and cutting-edge technology.",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQFkXvH0eSgaJQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709769713177?e=2147483647&v=beta&t=XEoZsk69qA5FKrDf6X9rpU7HZIFicvE5gzo1WFn-eqc",
+        "email": "alenriquezromo@my.dom.edu",
+        "major": "Biology, Chemistry",
+        "department": "Biology, Chemistry",
+        "website": "https://www.linkedin.com/in/lesli-enriquez-romo-238064262/",
+        "github": "/"
+    },
+    {
+        "name": "Joana Alvarado",
+        "title": "Deputy Director Biology",
+        "bio": "Joana Alvarado is the Co-Chief Biologist of OTTER Laboratories. She overlooks the lab's biology and chemistry projects, focusing on advancing experimental research at the intersection of biological sciences and cutting-edge technology.",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQH3x_uEt3Yh8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726086443090?e=1736985600&v=beta&t=B0sR4iRJ6YsyzK6zHOgmgjq3jwUxQDEu6RxW0AV47d0",
+        "email": "jalvarado3@my.dom.edu",
+        "major": "Biology, Chemistry",
+        "department": "Biology, Chemistry",
+        "website": "https://www.linkedin.com/in/joana-alvarado-a6811a244/",
+        "github": "/"
+    },
+    {
+        "name": "Eduardo Gaborit",
+        "title": "Chief Cybersecurity Officer",
+        "bio": "Eduardo Gaborit is the Chief Cybersecurity Officer and head of cybersecurity operations projects within the Computer Science and Mathematics Department at OTTER Laboratories.",
+        "image": "https://github.com/user-attachments/assets/e7b88cc0-1b1b-417d-bb92-15c3e4435c6d",
+        "email": "egaborit@my.dom.edu",
+        "major": "Computer Science, Mathematics, CIS",
+        "department": "AI, Cybersecurity, Mathematics",
+        "website": "/",
+        "github": "https://github.com/egaborit1"
     }
 ]
