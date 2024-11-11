@@ -941,17 +941,25 @@ Footer Styles
     color: #888;
 }
 
+
+
 /*  ================
 Responsive Design 
 ================ */
 @media (max-width: 768px) {
     .nav-container {
         grid-template-columns: 1fr;
+        text-align: center;
         gap: 1rem;
     }
 
     .nav-center {
         order: 2;
+    }
+
+    .nav-left {
+        display: flex;
+        justify-content: center;
     }
 
     .hero {
