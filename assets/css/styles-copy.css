@@ -1,6 +1,3 @@
-/*  ================
-Variables  
-================ */
 :root {
     --primary: #ffffff;
     --background: #000000;
@@ -11,9 +8,6 @@ Variables
     --spacing: clamp(4rem, 8vw, 8rem);
 }
 
-/*  ================
-Base Styles 
-================ */
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +22,7 @@ body {
 }
 
 
-/*  ================
-Header and Navigation 
-================ */
+/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -43,9 +35,9 @@ Header and Navigation
 }
 
 .logo {
-    height: 40px;
-    margin-right: 8px;
-    vertical-align: middle;
+    height: 40px;  /* Adjust size of the logo */
+    margin-right: 8px;  /* Space between logo and text */
+    vertical-align: middle;  /* Align logo vertically with the text */
 }
 
 .nav-container {
@@ -81,9 +73,7 @@ Header and Navigation
     color: var(--primary);
 }
 
-/*  ================
-Hero Section 
-================ */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     display: grid;
@@ -93,10 +83,10 @@ Hero Section
     padding-top: calc(var(--spacing) + 4rem);
     position: relative;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Updated background */
 }
 
-
+/* Hero Content */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -124,26 +114,23 @@ Hero Section
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
-    background: url('static-noise.png');
+    z-index: 0;  /* Ensures particles are behind the hero content */
+    background: url('static-noise.png'); /* TV static texture (can be a noise image or video) */
     background-size: cover;
-    animation: staticNoise 0.1s infinite linear;
+    animation: staticNoise 0.1s infinite linear; /* Static noise animation */
 }
 
 /* TV static animation */
 @keyframes staticNoise {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: 100% 100%;
-    }
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
-/*  ================
-Section Common Styles 
-================ */
+
+
+
+
+/* Section Styles */
 .section-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -163,29 +150,28 @@ section {
 }
 
 
-/*  ================
-Mission Section 
-================ */
+/* Mission Section */
 .mission {
     position: relative;
     padding: 40px 20px;
     background: url('/assets/images/content-7.png') no-repeat center center;
-    background-size: 100%;
-    background-attachment: fixed;
-    color: var(--primary);
-    height: 500px;
+    background-size: 100%; /* Make the image smaller (you can adjust this value) */
+    background-attachment: fixed; /* Keeps the image in place as the user scrolls */
+    color: var(--primary); /* Adjust text color for contrast */
+    height: 500px; /* Adjust the height as needed */
 }
 
 .mission .section-container {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensure content stays on top of the background */
 }
 
 .mission-text {
-    max-width: 700px;
-    z-index: 2;
+    max-width: 700px; /* Limit text width for readability */
+    z-index: 2; /* Ensure text stays above the background */
 }
 
+/* Darken the background image further with a stronger overlay */
 .mission::before {
     content: '';
     position: absolute;
@@ -193,13 +179,10 @@ Mission Section
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 0;
+    background: rgba(0, 0, 0, 0.9); /* Increased opacity to make the image even darker */
+    z-index: 0; /* Ensure the overlay is below the text */
 }
 
-/*  ================
-Apply Button Styles 
-================ */
 .apply-button {
     display: inline-flex;
     align-items: center;
@@ -216,37 +199,42 @@ Apply Button Styles
 
 .apply-button:hover {
     border-color: var(--primary);
-    background: var(--background);
-    color: var(--primary);
+    background: var(--background); /* Subtle background change on hover */
+    color: var(--primary); /* Text color change on hover */
 }
 
 
-/*  ================
-Position Grids 
-================ */
 
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Team Section - Position Cards */
 .positions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards */
     gap: 2rem;
 }
 
 .position-card {
-    background: var(--background);
-    color: var(--text);
-    padding: 1.5rem;
-    border-radius: 10px;
+    background: var(--background); /* Black background */
+    color: var(--text); /* White text */
+    padding: 1.5rem; /* Adjusted padding */
+    border-radius: 10px; /* Slightly sharper corners */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth hover effect */
     text-align: center;
 }
 
 .position-card img {
-    border-radius: 50%;
-    width: 120px;
+    border-radius: 50%; /* Circular image */
+    width: 120px; /* Adjust size */
     height: 120px;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -283,10 +271,12 @@ Position Grids
     transition: font-weight 0.3s ease;
 }
 
+/* Hover effect for position cards */
 .position-card:hover {
     transform: translateY(-5px);
 }
 
+/* Hover effect for Learn More link */
 .position-card:hover .position-link {
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--text-gradient));
@@ -294,6 +284,7 @@ Position Grids
     -webkit-text-fill-color: transparent;
 }
 
+/* Additional Card Styling */
 .position-card-content {
     display: flex;
     flex-direction: column;
@@ -325,6 +316,7 @@ Position Grids
     align-items: center;
     font-size: 0.9rem;
 }
+
 
 .info-label {
     color: var(--text-secondary);
@@ -387,15 +379,15 @@ Position Grids
     border: 1px solid rgba(255, 0, 0, 0.2);
 }
 
-/*  ================
-Publication Styles 
-================ */
+
+/* Publications Grid */
 .publications-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+/* Publication Card */
 .publication-card {
     background: var(--accent);
     border-radius: 12px;
@@ -407,6 +399,7 @@ Publication Styles
     transform: translateY(-2px);
 }
 
+/* Publication Type Badge */
 .publication-type-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
@@ -432,34 +425,34 @@ Publication Styles
     color: #8338ec;
 }
 
-
+/* Publication Title */
 .publication-title {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     color: var(--primary);
 }
 
-
+/* Publication Authors */
 .publication-authors {
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
-
+/* Publication Meta Information */
 .publication-meta {
     font-size: 0.875rem;
     color: var(--text-secondary);
     margin-top: 1rem;
 }
 
-
+/* Publication Abstraact */
 .publication-abstract {
     font-style: italic;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-
+/* Publication Link */
 .publication-link {
     display: inline-block;
     margin-top: 1rem;
@@ -467,9 +460,8 @@ Publication Styles
     color: var(--primary);
     text-decoration: none;
     transition: all 0.3s ease;
-
+    
 }
-
 .publication-link:hover {
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary), var(--text-gradient));
@@ -477,38 +469,30 @@ Publication Styles
     -webkit-text-fill-color: transparent;
 }
 
-
+/* Publication Keywords */
 .publication-doi a {
     color: var(--text-secondary);
 }
 
 .keyword-tag-pub {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.3rem 0.8rem;
-    font-size: 0.75rem;
-    color: var(--primary);
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+    padding: 0.3rem 0.8rem; /* Compact padding for each tag */
+    font-size: 0.75rem; /* Small text for tags */
+    color: var(--primary); /* Primary color for text */
+    margin-right: 0.5rem; /* Space between tags */
+    margin-bottom: 0.5rem; /* Space between rows of tags */
     display: inline-block;
-    text-transform: capitalize;
-    font-weight: 400;
-    white-space: nowrap;
+    text-transform: capitalize; /* Consistent capitalization */
+    font-weight: 400; /* Regular font weight */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 .keyword-tag-pub:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    cursor: default;
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+    cursor: default; /* No pointer cursor, reinforcing it's not clickable */
 }
 
-/*  ================
-Research Styles 
-================ */
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
+/* Research Updates Styles */
 .research-updates {
     padding: var(--spacing) 0;
 }
@@ -612,10 +596,7 @@ Research Styles
     stroke: var(--primary);
 }
 
-/*  ================
-Error Styles 
-================ */
-
+/* No Results Message */
 .no-results {
     text-align: center;
     color: var(--text-secondary);
@@ -623,12 +604,10 @@ Error Styles
     margin-top: 2rem;
 }
 
-/*  ================
-Terms and Conditons Styles 
-================ */
+/* Terms and Conditions Section Styles */
 .terms-conditions {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--background); /* Dark background for the section */
+    color: var(--text); /* White text color */
     padding: 4rem 0;
     padding-top: 7rem;
 }
@@ -637,14 +616,14 @@ Terms and Conditons Styles
 .terms-conditions h2,
 .terms-conditions h3 {
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primary); /* Accent color for headings */
     margin-bottom: 1.5rem;
 }
 
 .terms-conditions p,
 .terms-conditions ul {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Secondary text color for readability */
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -665,7 +644,7 @@ Terms and Conditons Styles
 }
 
 .terms-conditions h2 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2rem); /* Dynamic font size */
     background: linear-gradient(135deg, var(--primary), var(--text-gradient));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -685,7 +664,7 @@ Terms and Conditons Styles
 }
 
 .terms-conditions .section-container p {
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Lighter color for body text */
     margin-bottom: 1.5rem;
 }
 
@@ -697,7 +676,7 @@ Terms and Conditons Styles
 }
 
 .terms-conditions a:hover {
-    color: var(--text-gradient);
+    color: var(--text-gradient); /* Accent color on hover */
     text-decoration: underline;
 }
 
@@ -710,23 +689,16 @@ Terms and Conditons Styles
     text-align: center;
 }
 
-/*  ================
-Careers Styles 
-================ */
 .careers {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--background); /* Dark background for the section */
+    color: var(--text); /* White text color */
     padding: 4rem 0;
     padding-top: 7rem;
 }
 
-/*  ================
-About Styles 
-================ */
-
 .about {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--background); /* Dark background for the section */
+    color: var(--text); /* White text color */
     padding: 4rem 0;
     padding-top: 7rem;
 }
@@ -735,13 +707,13 @@ About Styles
 .abouty h2,
 .about h3 {
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primary); /* Accent color for headings */
     margin-bottom: 1.5rem;
 }
 
 .about p {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Secondary text color for readability */
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -761,16 +733,14 @@ About Styles
 }
 
 .about .section-container p {
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Lighter color for body text */
     margin-bottom: 1.5rem;
 }
 
-/*  ================
-Privacy Policy Styles 
-================ */
+/* Privacy Policy Section Styles */
 .privacy-policy {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--background); /* Dark background for the section */
+    color: var(--text); /* White text color */
     padding: 4rem 0;
     padding-top: 7rem;
 }
@@ -779,14 +749,14 @@ Privacy Policy Styles
 .privacy-policy h2,
 .privacy-policy h3 {
     font-weight: 700;
-    color: var(--primary);
+    color: var(--primary); /* Accent color for headings */
     margin-bottom: 1.5rem;
 }
 
 .privacy-policy p,
 .privacy-policy ul {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Secondary text color for readability */
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -807,7 +777,7 @@ Privacy Policy Styles
 }
 
 .privacy-policy h2 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2rem); /* Dynamic font size */
     background: linear-gradient(135deg, var(--primary), var(--text-gradient));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -827,7 +797,7 @@ Privacy Policy Styles
 }
 
 .privacy-policy .section-container p {
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Lighter color for body text */
     margin-bottom: 1.5rem;
 }
 
@@ -839,7 +809,7 @@ Privacy Policy Styles
 }
 
 .privacy-policy a:hover {
-    color: var(--text-gradient);
+    color: var(--text-gradient); /* Accent color on hover */
     text-decoration: underline;
 }
 
@@ -853,9 +823,7 @@ Privacy Policy Styles
 }
 
 
-/*  ================
-Footer Styles 
-================ */
+/* Footer */
 .footer {
     background: var(--accent);
     padding: var(--spacing) 0;
@@ -898,6 +866,7 @@ Footer Styles
     color: var(--text-secondary);
 }
 
+
 .footer-logo-container {
     display: flex;
     align-items: center;
@@ -906,19 +875,20 @@ Footer Styles
 }
 
 .footer-logo {
-    height: 30px;
-    margin-right: 10px;
-    fill: #e800008a;
+    height: 30px;  /* Adjust size */
+    margin-right: 10px;  /* Space between logo and text */
+    fill: #e800008a; 
 }
 
 .footer-bottom p {
     font-size: 14px;
-    color: #888;
+    color: #888;  /* Adjust text color */
 }
 
-/*  ================
-Responsive Design 
-================ */
+
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
         grid-template-columns: 1fr;
@@ -938,7 +908,7 @@ Responsive Design
     }
 
     .publications-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Adjusts the grid for smaller screens */
     }
 
     .research-update-card {
@@ -964,3 +934,4 @@ Responsive Design
         padding: 0.5rem;
     }
 }
+
