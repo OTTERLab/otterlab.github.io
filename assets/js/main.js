@@ -1,7 +1,8 @@
+const main_color = "#ff6600"
 particlesJS('particles-js', {
     particles: {
       number: {
-        value: 500,  // More particles for a denser "atom collision" effect
+        value: 400,  // More particles for a denser "atom collision" effect
         density: {
           enable: true,
           value_area: 1000

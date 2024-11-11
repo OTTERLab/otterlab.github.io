@@ -169,7 +169,7 @@ Mission Section
 .mission {
     position: relative;
     padding: 40px 20px;
-    background: url('/assets/images/content-7.png') no-repeat center center;
+    background: url('/assets/images/content-8.png') no-repeat center center;
     background-size: 100%;
     background-attachment: fixed;
     color: var(--primary);
@@ -995,5 +995,13 @@ Responsive Design
     .research-update-link {
         font-size: 0.875rem;
         padding: 0.5rem;
+    }
+    .footer-logo-container {
+        flex-direction: column; /* Stack logo and text vertically */
+    }
+
+    .footer-logo {
+        margin-right: 0; /* Remove side margin to center-align the logo */
+        margin-bottom: 10px; /* Add space below the logo */
     }
 }
