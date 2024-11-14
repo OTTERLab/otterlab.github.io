@@ -64,5 +64,16 @@
         "department": "AI, Cybersecurity, Mathematics",
         "website": "/",
         "github": "http://www.linkedin.com/in/egaborit"
+    },
+    {
+        "name": "Cristian Campos",
+        "title": "Chief Data Science",
+        "bio": "Cristian Campos is the Chief of Data Science at OTTER Laboratories.",
+        "image": "https://www.cristiancampos.net/assets/img/avatars/avatar.jpg",
+        "email": "ccamposmartinez@my.dom.edu",
+        "major": "Data Science",
+        "department": "Data Science, Mathematics",
+        "website": "https://www.cristiancampos.net",
+        "github": "https://github.com/shampost"
     }
 ]
