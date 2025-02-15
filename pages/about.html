@@ -2,114 +2,156 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | OTTER LABORATORIES</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - OTTER Laboratories</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Additional CSS for donut animation */
+    .about-section {
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.8);
+      /* Opacity applied to the section */
+    }
 
-    <!-- Meta for SEO -->
-    <meta name="description"
-        content="Pioneering AI and experimental research across computer science, math, physics, and theory.">
-    <meta name="keywords"
-        content="autonomous systems, robotics, AI, research, technology, innovation, machine learning, aerospace, STEM">
+    .donut-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      font-family: monospace;
+      font-size: 12px;
+      color: rgba(0, 250, 21, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: pre;
+      text-align: center;
+    }
 
-    <!-- Open Graph and Twitter Cards -->
-    <meta property="og:title" content="OTTER Laboratories: Research in AI and Theory">
-    <meta property="og:description" content="Pioneering research in AI, computer science, mathematics, and physics.">
-    <meta property="og:image"
-        content="https://www.otterspecialistgroup.org/osg-newsite/wp-content/uploads/2017/04/ThinkstockPhotos-827261360.jpg">
-    <meta property="og:url" content="https://www.otterlaboratories.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OTTER Laboratories: Research in AI and Theory">
-    <meta name="twitter:description" content="Pioneering research in AI, computer science, mathematics, and physics.">
-    <meta name="twitter:image"
-        content="https://www.otterspecialistgroup.org/osg-newsite/wp-content/uploads/2017/04/ThinkstockPhotos-827261360.jpg">
+    .about-content {
+      position: relative;
+      z-index: 2;
+      padding: 3rem;
+      border-radius: 8px;
+      color: white;
+    }
+  </style>
 
-    <!-- Favicon and preconnects -->
-    <link rel="icon" href="/images/otterlab-logo-white.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon" href="/images/otterlab-logo-white.png" type="image/png">
-    <link rel="icon" href="/images/otterlab-logo-white.svg" type="image/svg+xml">
-    <link rel="icon" href="/images/otterlab-logo-white.png" type="image/png">
-    <link rel="icon" href="/images/otterlab-logo-white.ico" type="image/x-icon">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "OTTER Laboratories",
-          "url": "https://www.otterlaboratories.com",
-          "logo": "/images/otterlab-logo-white.svg",
-          "sameAs": ["https://github.com/OTTERLab"]
-        }
-    </script>
-
-    <!-- Retina Display Scaling -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="nav-left">
-                <a href="/" class="home-link">
-                    <img src="/assets/images/otterlab-logo-white.svg" alt="OTTERLabs Logo" class="logo">
-                    OTTER LABORATORIES
-                </a>
-            </div>
-            <div class="nav-center">
-                <a href="/pages/people.html" class="nav-link">People</a>
-                <a href="/pages/publications.html" class="nav-link">Publications</a>
-                <a href="/pages/research.html" class="nav-link">Research</a>
-            </div>
-        </nav>
-    </header>
+<body class="about-page">
+  <!-- Banner Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../index.html" class="home-link">
+          <img src="../assets/logo/otterlab-logo-white.svg" alt="OtterLab Logo" class="logo"> OTTERLab
+        </a>
+      </div>
+      <nav class="nav-center">
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="records.html" class="nav-link">Records</a>
+        <a href="about.html" class="nav-link">About Us</a>
+      </nav>
+    </div>
+  </header>
 
-    <!--About -->
-    <section class="about">
-        <div class="section-container">
-            <h1 class="section-title">About Us</h1>
-            <p>We disrupt the industry. We challenge the status quo.Whatever research we can imagine, we'll turn into
-                reality. This is who we are.</p>
+  <!-- About Us Section with Donut Animation -->
+  <section class="about-section">
+    <div id="canvas" class="donut-canvas"></div>
+    <div class="about-content">`
+      <h1>About OTTER Laboratories</h1>
+      <p>
+        OTTER Laboratories is a student-driven research collective dedicated to developing innovative tools and
+        solutions that empower the university community and beyond. We focus on technology, collaboration, and creating
+        impactful resources for education and growth.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <a href="education.html">Education</a>
+          <a href="research.html">Research</a>
+          <a href="records.html">Records</a>
+          <a href="about.html">About Us</a>
         </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <a href="/pages/people.html">People</a>
-                    <a href="/pages/publications.html">Publications</a>
-                    <a href="/pages/research.html">Research</a>
-                    <a href="/pages/contact.html">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <a href="https://github.com/OTTERLab" target="_blank">GitHub</a>
-                    <a href="/pages/about.html">About Us</a>
-                    <a href="/pages/privacy.html">Privacy Policy</a>
-                    <a href="/pages/terms.html">Terms of Use</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Email: <a href="mailto:pbedollaortiz@my.dom.edu">pbedollaortiz@my.dom.edu</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-logo-container">
-                    <img src="/assets/images/otterlab-logo-footer.svg" alt="OTTERLabs Logo" class="footer-logo">
-                    <p>&copy; 2024 OTTER LABORATORIES. All rights reserved.</p>
-                </div>
-            </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <a href="https://github.com/your-repo">GitHub</a>
+          <a href="#">Contact</a>
         </div>
-    </footer>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logo-container">
+          <img src="../assets/logo/otterlab-logo-footer.svg" alt="OtterLab Logo" class="footer-logo">
+        </div>
+        <p>&copy; 2024 OTTER Laboratories. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donut Animation Script -->
+  <script>
+    function donut() {
+      const canvas = document.querySelector('#canvas');
+      const canvasWidth = 160; // Increased width of the canvas
+      const canvasHeight = 48; // Increased height of the canvas
+      const canvasArea = canvasHeight * canvasWidth;
+      const yOffset = 24; // Adjusted offset for centering the donut vertically
+      const xOffset = 80; // Adjusted offset for centering the donut horizontally
+      const innerRadius = 2;
+      const r1Points = 90;
+      const r2Points = 314;
+      const fov = 5;
+      const what = 40; // Increased size of the donut
+      let A = 0, B = 0;
+      let shades = '.,-~:;=!*#$@'.split('');
+
+      const renderFrame = () => {
+        let b = Array(canvasArea).fill(' ');
+        let z = Array(7040).fill(0);
+
+        for (let j = 0; j < 6.28; j += 6.28 / r1Points) {
+          for (let i = 0; i < 6.28; i += 6.28 / r2Points) {
+            let c = Math.sin(i);
+            let d = Math.cos(j);
+            let h = d + innerRadius;
+            let D = 1 / (c * h * Math.sin(A) + Math.sin(j) * Math.cos(A) + fov);
+            let t = c * h * Math.cos(A) - Math.sin(j) * Math.sin(A);
+
+            let x = (xOffset + what * D * (Math.cos(i) * h * Math.cos(B) - t * Math.sin(B))) | 0;
+            let y = (yOffset + (what / 2) * D * (Math.cos(i) * h * Math.sin(B) + t * Math.cos(B))) | 0;
+            let o = x + canvasWidth * y;
+            let N = (8 * ((Math.sin(j) * Math.sin(A) - c * d * Math.cos(A)) * Math.cos(B) - c * d * Math.sin(A) - Math.sin(j) * Math.cos(A) - Math.cos(i) * d * Math.sin(B))) | 0;
+
+            if (y < canvasHeight && y > 0 && x > 0 && x < canvasWidth && D > z[o]) {
+              z[o] = D;
+              b[o] = shades[N > 0 ? N : 0];
+            }
+          }
+        }
+
+        canvas.innerHTML = b.join('').match(new RegExp(`.{${canvasWidth}}`, 'g')).join('<br>');
+        A += 0.04;
+        B += 0.02;
+      };
+
+      setInterval(renderFrame, 50);
+    }
+
+    donut();
+  </script>
 </body>
 
 </html>

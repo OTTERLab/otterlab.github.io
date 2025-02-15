@@ -1,0 +1,537 @@
+/* Root Variables */
+:root {
+  --primary: #ffffff;
+  --background: #000000;
+  --text: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-gradient: #ff6600;
+  --accent: #1a1a1a;
+  --spacing: clamp(4rem, 8vw, 8rem);
+}
+
+/* General Styles */
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Navigation */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1px);
+  z-index: 1000;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .nav-container {
+    grid-template-columns: 1fr; /* Stack the nav items */
+    justify-items: center;
+  }
+
+  .nav-center {
+    flex-direction: column;
+    gap: 1.5rem; /* Adjusted gap between nav links */
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 1.2rem; /* Slightly larger nav text for easier tap on small screens */
+  }
+}
+
+.nav-left .home-link {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* Slogan Section with Animated Pointillism Background */
+.slogan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  height: 50vh;
+  padding-top: 10rem;
+  overflow: hidden;
+  background: black; /* Dark background for ASCII contrast */
+}
+
+.slogan h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  position: relative;
+  z-index: 2;
+}
+
+#asciiBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  color: rgba(4, 253, 54, 0.5); /* Green glow effect */
+  white-space: pre;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+
+/* Animation for Pointillism Background */
+@keyframes movePoints {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--spacing);
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+/* Join Us Section */
+.join-us {
+  text-align: center;
+  padding: var(--spacing);
+  background: #000000;
+}
+
+.join-us h2 {
+  color: var(--primary);
+}
+
+/* Footer Styles */
+.footer {
+  background: var(--accent);
+  padding: 2rem 0; /* Reduced padding for less grey space */
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;  /* Use flexbox for better control */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  width: 100%;  /* Ensure the sections take full width */
+}
+
+.footer-section h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;  /* Larger heading size for emphasis */
+}
+
+.footer-section a {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--primary);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 1rem;  /* Reduced space above the footer text */
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Education Section - Stacked Cards */
+#education-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.education-card {
+  background: transparent;  /* Transparent background to blend with the page */
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);  /* Light border to differentiate */
+  border-left: 2px solid var(--primary);  /* Border on the left side for distinction */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.education-summary {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.education-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.education-link-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: max-content;
+  margin-top: 1rem;
+}
+
+.education-link-button:hover {
+  background: rgba(0, 255, 157, 0.1);
+  border-color: var(--primary);
+}
+
+/* Research Section - Stacked Cards */
+#research-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.research-card {
+  background: transparent;  /* Transparent background to blend with the page */
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);  /* Light border to differentiate */
+  border-left: 2px solid var(--primary);  /* Border on the left side for distinction */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.research-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.research-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.research-bio {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.research-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.research-link-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: max-content;
+  margin-top: 1rem;
+}
+
+.research-link-button:hover {
+  background: rgba(0, 255, 157, 0.1);
+  border-color: var(--primary);
+}
+
+/* Records Page Style */
+#records-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Record Item Styling */
+.record-item {
+  background: transparent;  /* Transparent background to blend with the page */
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);  /* Light border to differentiate */
+  border-left: 2px solid var(--primary);  /* Border on the left side for distinction */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Record Header (Name & Date) */
+.record-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;  /* No underline */
+}
+
+.record-name:hover {
+  color: var(--secondary); /* Change color on hover */
+}
+
+.record-date {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Record Link Button */
+.record-link {
+  font-size: 1.125rem;
+  color: var(--primary);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border for the link */
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  width: max-content;
+  transition: all 0.3s ease;
+}
+
+.record-link:hover {
+  background: rgba(0, 255, 157, 0.1); /* Subtle background on hover */
+  border-color: var(--primary);
+}
+
+/* Error Message */
+.error-message {
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+/* Stacked List Layout */
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;  /* Space between each record */
+  width: 100%;
+}
+
+/* Responsive layout - stack more neatly on larger screens */
+@media (min-width: 768px) {
+  .records-list {
+    gap: 2rem;  /* Larger gap between items on bigger screens */
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;  /* Reduced gap on mobile */
+  }
+
+  .footer-section h3 {
+    font-size: 1.125rem;  /* Slightly smaller headings on mobile */
+  }
+
+  .footer-bottom {
+    margin-top: 1rem;
+    font-size: 12px;
+  }
+
+  .footer-logo {
+    height: 20px;
+  }
+}
+
+
+/* About Us Page */
+.about-page {
+  background-color: var(--background); /* Black background */
+  color: var(--text); /* White text color */
+  padding: 0;
+  margin: 0;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;  /* Full height of the viewport */
+  padding: 2rem;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary); /* White primary color for the title */
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  color: var(--text-secondary); /* Slightly lighter text color for the paragraph */
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* Mobile Adjustments for Education Cards */
+@media (max-width: 768px) {
+  .education-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .education-title {
+    font-size: 1.5rem;
+  }
+
+  .education-summary {
+    font-size: 1rem;
+  }
+
+  .education-link-button {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Media Queries */
+@media (max-width: 480px) {
+  .slogan h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .footer-logo {
+    height: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}

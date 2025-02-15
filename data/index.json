@@ -1,0 +1,21 @@
+{
+  "slogan": "Code with Integrity. Build with Purpose.",
+  "infoSection": {
+    "whoWeAre": {
+      "heading": "Who We Are",
+      "content": "OTTER Laboratories is a research group focused on developing advanced tools and technologies using Python, C++, and C. We build secure, efficient systems while exploring innovations in software engineering, systems design, and computational research. Through dedicated research and experimentation, we create lasting impacts in fields ranging from AI to cybersecurity."
+    },
+    "whatWeDo": {
+      "heading": "What We Do",
+      "content": "We conduct innovative research in software engineering, systems security, and computational science. Our team combines cutting-edge technology with rigorous methodology to advance the field. Through collaborative projects and experimental approaches, we develop solutions that address real-world challenges."
+    },
+    "latestWork": {
+      "heading": "Latest Work",
+      "content": "Our recent projects span advanced security tools, artificial intelligence applications, and system optimization frameworks. We regularly publish our findings and breakthroughs in peer-reviewed venues. Our work demonstrates our commitment to pushing technological boundaries forward."
+    }
+  },
+  "joinUs": {
+    "heading": "Recruitment & Opportunities",
+    "content": "We're recruiting dedicated students passionate about technology and research who demonstrate drive, adaptability, and collaboration skills. Requires high school-level math and interest in coding (experience optional), with meetings on Wednesdays during spring semester. We welcome contributions and are developing a support partnership with Google, though OTTER Labs remains independent."
+  }
+}
