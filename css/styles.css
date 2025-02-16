@@ -9,7 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 /* ===================================================
@@ -23,12 +23,33 @@ body {
   --text-gradient: #ff6600;
   --accent: #1a1a1a;
   --spacing: clamp(4rem, 8vw, 8rem);
+  --header-height: 80px;
 }
 
 body {
   background: var(--background);
   color: var(--text);
   font-family: Arial, sans-serif;
+}
+
+body.index-page {
+  padding-top: var(--header-height);
+}
+
+body.about-page {
+  padding-top: var(--header-height);
+}
+
+body.education-page {
+  padding-top: var(--header-height);
+}
+
+body.records-page {
+  padding-top: var(--header-height);
+}
+
+body.research-page {
+  padding-top: var(--header-height);
 }
 
 /* ===================================================
@@ -44,6 +65,7 @@ body {
   z-index: 1000;
   padding: 1.5rem 0;
   width: 100%;
+  height: var(--header-height);
 }
 
 .nav-container {
@@ -119,7 +141,7 @@ body {
   height: 100%;
   font-family: monospace;
   color: rgba(4, 253, 54, 0.5);
-  white-space: pre; /* For mobile, see media query below */
+  white-space: pre; 
   overflow: hidden;
   z-index: 1;
   font-size: 10px;
@@ -374,7 +396,7 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equally-sized columns */
+  grid-template-columns: 1fr 1fr; 
   gap: 2rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -435,23 +457,29 @@ body {
 
 /* For devices with max-width: 768px */
 @media (max-width: 768px) {
+  .header{
+    padding-bottom: 90px;
+  }
   /* Navigation adjustments */
   .nav-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto; 
     justify-items: center;
+    
   }
   .nav-center {
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: center;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+    justify-content: center; 
   }
   .nav-link {
-    font-size: 1.2rem;
+    font-size: 1rem; 
+    white-space: nowrap; 
   }
 
   /* Footer adjustments */
   .footer-grid {
-    grid-template-columns: 1fr; /* Stack the sections on top of each other */
+    grid-template-columns: 1fr; 
   }
   
   .footer-section h3 {
@@ -483,6 +511,12 @@ body {
 
 /* For devices with max-width: 480px */
 @media (max-width: 480px) {
+  :root {
+    --header-height: 80px; 
+  }
+  .header{
+    padding-bottom: 90px;
+  }
   .slogan h1 {
     font-size: 1.5rem;
   }
